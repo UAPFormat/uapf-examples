@@ -1,0 +1,31 @@
+{
+  "id": "acme-docflow",
+  "name": "DocumentLifecycleACME",
+  "version": "2025.11.01",
+  "description": "Unified model for document intake, routing, approval, and archival at ACME.",
+  "components": {
+    "process": [
+      "process/bpmn.xml",
+      "process/cmmn.xml"
+    ],
+    "decisions": [
+      "decisions/routing.dmn",
+      "decisions/retention.dmn",
+      "decisions/glossary.json"
+    ],
+    "agents": [
+      "agents/roles.json",
+      "agents/capabilities.json",
+      "agents/bindings.json"
+    ],
+    "integration": [
+      "integration/mcp-tools.json",
+      "integration/a2a-schemas.json"
+    ],
+    "metadata": [
+      "metadata/version.json",
+      "metadata/provenance.json",
+      "metadata/compliance.json"
+    ]
+  }
+}

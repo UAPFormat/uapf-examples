@@ -1,0 +1,12 @@
+{
+  "tools": [
+    {
+      "id": "namejs-lookup",
+      "name": "namejs.lookupDocument",
+      "description": "Lookup a document in the Namejs DMS.",
+      "endpoint": "/mcp/namejs/document",
+      "inputSchema": {"type": "object", "properties": {"recordId": {"type": "string"}}, "required": ["recordId"]},
+      "outputSchema": {"type": "object", "properties": {"status": {"type": "string"}}, "required": ["status"]}
+    }
+  ]
+}

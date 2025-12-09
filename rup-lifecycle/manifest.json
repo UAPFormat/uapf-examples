@@ -1,0 +1,31 @@
+{
+  "id": "rup-lifecycle",
+  "name": "RUPLifecycle",
+  "version": "2025.11.01",
+  "description": "Release and lifecycle orchestration for ACME's RUP stack.",
+  "components": {
+    "process": [
+      "process/bpmn.xml",
+      "process/cmmn.xml"
+    ],
+    "decisions": [
+      "decisions/testing.dmn",
+      "decisions/deployment.dmn",
+      "decisions/glossary.json"
+    ],
+    "agents": [
+      "agents/roles.json",
+      "agents/capabilities.json",
+      "agents/bindings.json"
+    ],
+    "integration": [
+      "integration/mcp-tools.json",
+      "integration/a2a-schemas.json"
+    ],
+    "metadata": [
+      "metadata/version.json",
+      "metadata/provenance.json",
+      "metadata/compliance.json"
+    ]
+  }
+}

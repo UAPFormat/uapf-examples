@@ -1,0 +1,7 @@
+{
+  "roles": [
+    {"id": "requirements_agent", "name": "Requirements Agent", "description": "Captures and refines product requirements."},
+    {"id": "test_agent", "name": "Test Agent", "description": "Runs automated test suites and reports quality."},
+    {"id": "deployment_agent", "name": "Deployment Agent", "description": "Orchestrates deployments across environments."}
+  ]
+}

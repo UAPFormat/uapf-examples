@@ -1,0 +1,6 @@
+{
+  "terms": [
+    { "term": "RUP", "definition": "Rational Unified Process lifecycle." },
+    { "term": "release", "definition": "A packaged increment of the product ready for deployment." }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "roles": [
+    {"id": "intake_agent", "name": "Intake Agent", "description": "Handles document intake and registration."},
+    {"id": "classification_agent", "name": "Classification Agent", "description": "Classifies documents and assigns nomenclature."},
+    {"id": "routing_agent", "name": "Routing Agent", "description": "Routes documents to responsible units."}
+  ]
+}

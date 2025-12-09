@@ -1,0 +1,7 @@
+{
+  "bindings": [
+    {"taskId": "CaptureRequirements", "roleId": "requirements_agent", "capabilityId": "collect-feedback", "toolIds": ["repo-commit"]},
+    {"taskId": "RunRegression", "roleId": "test_agent", "capabilityId": "run-ci", "toolIds": ["ci-run-tests"]},
+    {"taskId": "DeployRelease", "roleId": "deployment_agent", "capabilityId": "deploy-production", "toolIds": ["repo-commit"]}
+  ]
+}

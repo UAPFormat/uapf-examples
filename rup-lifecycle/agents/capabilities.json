@@ -1,0 +1,10 @@
+{
+  "capabilities": [
+    {"id": "collect-feedback", "name": "Collect Feedback", "description": "Gather requirements feedback."},
+    {"id": "update-backlog", "name": "Update Backlog", "description": "Curate backlog items for release."},
+    {"id": "run-ci", "name": "Run CI", "description": "Trigger continuous integration pipelines."},
+    {"id": "report-coverage", "name": "Report Coverage", "description": "Summarize code coverage results."},
+    {"id": "deploy-staging", "name": "Deploy to Staging", "description": "Deploy release candidate to staging."},
+    {"id": "deploy-production", "name": "Deploy to Production", "description": "Deploy release candidate to production."}
+  ]
+}

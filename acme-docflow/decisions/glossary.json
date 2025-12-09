@@ -1,0 +1,6 @@
+{
+  "terms": [
+    { "term": "record", "definition": "A registered document with assigned metadata." },
+    { "term": "routing", "definition": "The act of directing a document to the responsible party." }
+  ]
+}

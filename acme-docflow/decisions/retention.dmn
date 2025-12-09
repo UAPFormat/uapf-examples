@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" id="RetentionDecision" name="RetentionDecision" namespace="http://acme.example/dmn/retention">
+  <description>Determine how long to retain processed documents.</description>
+</definitions>

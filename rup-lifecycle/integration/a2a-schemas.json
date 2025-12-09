@@ -1,0 +1,21 @@
+{
+  "schemas": [
+    {
+      "id": "deployment-status",
+      "name": "Deployment Status",
+      "description": "Share deployment status and release metadata.",
+      "messageType": "event",
+      "payloadSchema": {
+        "type": "object",
+        "properties": {
+          "releaseId": {"type": "string"},
+          "environment": {"type": "string"},
+          "status": {"type": "string"},
+          "notes": {"type": "string"}
+        },
+        "required": ["releaseId", "environment", "status"]
+      },
+      "requiredRoles": ["deployment_agent"]
+    }
+  ]
+}

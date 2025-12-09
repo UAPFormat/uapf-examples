@@ -1,0 +1,20 @@
+{
+  "tools": [
+    {
+      "id": "repo-commit",
+      "name": "repo.commit",
+      "description": "Commit code changes for a release candidate.",
+      "endpoint": "/mcp/repo/commit",
+      "inputSchema": {"type": "object", "properties": {"branch": {"type": "string"}}, "required": ["branch"]},
+      "outputSchema": {"type": "object", "properties": {"commit": {"type": "string"}}, "required": ["commit"]}
+    },
+    {
+      "id": "ci-run-tests",
+      "name": "ci.runTests",
+      "description": "Execute CI pipelines for a given branch or tag.",
+      "endpoint": "/mcp/ci/run-tests",
+      "inputSchema": {"type": "object", "properties": {"ref": {"type": "string"}}, "required": ["ref"]},
+      "outputSchema": {"type": "object", "properties": {"status": {"type": "string"}}, "required": ["status"]}
+    }
+  ]
+}

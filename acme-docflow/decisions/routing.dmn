@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" id="RoutingDecision" name="RoutingDecision" namespace="http://acme.example/dmn/routing">
+  <description>Route documents based on classification and priority.</description>
+</definitions>

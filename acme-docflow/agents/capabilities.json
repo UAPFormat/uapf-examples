@@ -1,0 +1,10 @@
+{
+  "capabilities": [
+    {"id": "receive-email", "name": "Receive Email", "description": "Capture inbound documents from email."},
+    {"id": "create-record", "name": "Create Record", "description": "Create system records for new documents."},
+    {"id": "nlp-extract", "name": "NLP Extraction", "description": "Extract intents and metadata from documents."},
+    {"id": "dmn-evaluate-routing", "name": "Evaluate Routing", "description": "Use DMN to determine routing decisions."},
+    {"id": "assign-recipient", "name": "Assign Recipient", "description": "Assign documents to responsible parties."},
+    {"id": "notify", "name": "Notify Stakeholders", "description": "Send routing notifications to stakeholders."}
+  ]
+}

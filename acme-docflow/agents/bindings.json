@@ -1,0 +1,7 @@
+{
+  "bindings": [
+    {"taskId": "ReceiveDocument", "roleId": "intake_agent", "capabilityId": "receive-email", "toolIds": ["namejs-lookup"]},
+    {"taskId": "ClassifyDocument", "roleId": "classification_agent", "capabilityId": "dmn-evaluate-routing", "toolIds": []},
+    {"taskId": "RouteDocument", "roleId": "routing_agent", "capabilityId": "assign-recipient", "toolIds": ["namejs-lookup"]}
+  ]
+}

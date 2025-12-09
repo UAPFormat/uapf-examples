@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/CMMN/20151109/MODEL" id="AcmeDocflowCMMN" targetNamespace="http://acme.example/cmmn">
+  <case id="DocumentLifecycle" name="Document Lifecycle" />
+</definitions>

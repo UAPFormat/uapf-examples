@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" id="TestingDecision" name="TestingDecision" namespace="http://acme.example/rup/dmn/testing">
+  <description>Determine which test suites to run for a release increment.</description>
+</definitions>

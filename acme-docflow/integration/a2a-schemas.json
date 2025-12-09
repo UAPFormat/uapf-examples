@@ -1,0 +1,21 @@
+{
+  "schemas": [
+    {
+      "id": "task-delegation",
+      "name": "Task Delegation",
+      "description": "Delegate a document-related task to another agent.",
+      "messageType": "request",
+      "payloadSchema": {
+        "type": "object",
+        "properties": {
+          "taskId": {"type": "string"},
+          "fromAgent": {"type": "string"},
+          "toAgent": {"type": "string"},
+          "payload": {"type": "object"}
+        },
+        "required": ["taskId", "fromAgent", "toAgent"]
+      },
+      "requiredRoles": ["classification_agent", "routing_agent"]
+    }
+  ]
+}
