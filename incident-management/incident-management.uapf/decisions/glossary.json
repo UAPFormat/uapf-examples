@@ -1,0 +1,29 @@
+{
+  "terms": [
+    {
+      "name": "incidentId",
+      "description": "Unique identifier for an incident record.",
+      "type": "string"
+    },
+    {
+      "name": "impact",
+      "description": "Magnitude of business or user impact (1-3).",
+      "type": "number"
+    },
+    {
+      "name": "urgency",
+      "description": "How quickly the incident must be addressed (1-3).",
+      "type": "number"
+    },
+    {
+      "name": "priority",
+      "description": "Priority assigned to the incident (CRITICAL, HIGH, STANDARD).",
+      "type": "string"
+    },
+    {
+      "name": "slaTarget",
+      "description": "Target response or resolution time for the incident.",
+      "type": "string"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/"
+             xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"
+             id="Definitions_IncidentPriority"
+             name="Incident Priority"
+             namespace="http://example.com/uapf/incident-management">
+  <decision id="Decision_IncidentPriority" name="IncidentPriority">
+    <variable id="var_priority" name="priority" typeRef="string"/>
+    <decisionTable id="DecisionTable_IncidentPriority" hitPolicy="FIRST">
+      <input id="Input_impact">
+        <inputExpression id="InputExpression_impact" typeRef="number">
+          <text>impact</text>
+        </inputExpression>
+      </input>
+      <input id="Input_urgency">
+        <inputExpression id="InputExpression_urgency" typeRef="number">
+          <text>urgency</text>
+        </inputExpression>
+      </input>
+      <output id="Output_priority" name="priority" typeRef="string"/>
+
+      <rule id="Rule_1">
+        <inputEntry id="Rule_1_in1">
+          <text>&gt;= 3</text>
+        </inputEntry>
+        <inputEntry id="Rule_1_in2">
+          <text>&gt;= 3</text>
+        </inputEntry>
+        <outputEntry id="Rule_1_out1">
+          <text>"CRITICAL"</text>
+        </outputEntry>
+      </rule>
+
+      <rule id="Rule_2">
+        <inputEntry id="Rule_2_in1">
+          <text>&gt;= 2</text>
+        </inputEntry>
+        <inputEntry id="Rule_2_in2">
+          <text>&gt;= 2</text>
+        </inputEntry>
+        <outputEntry id="Rule_2_out1">
+          <text>"HIGH"</text>
+        </outputEntry>
+      </rule>
+
+      <rule id="Rule_3">
+        <inputEntry id="Rule_3_in1">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="Rule_3_in2">
+          <text>-</text>
+        </inputEntry>
+        <outputEntry id="Rule_3_out1">
+          <text>"STANDARD"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>

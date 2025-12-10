@@ -1,0 +1,23 @@
+{
+  "uapfVersion": "0.9.0",
+  "id": "gov.example.public-sector-permit",
+  "name": "Public-Sector Permit Process",
+  "version": "1.0.0",
+  "description": "Public administration permit intake with compliance checks and multi-stage approvals.",
+  "models": {
+    "bpmn": [
+      "process/permit-process.bpmn.xml"
+    ],
+    "dmn": [
+      "decisions/permit-eligibility.dmn.xml"
+    ],
+    "cmmn": []
+  },
+  "tags": [
+    "public-sector",
+    "permit",
+    "compliance",
+    "bpmn",
+    "dmn"
+  ]
+}

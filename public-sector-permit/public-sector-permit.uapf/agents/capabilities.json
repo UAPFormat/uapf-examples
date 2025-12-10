@@ -1,0 +1,28 @@
+{
+  "capabilities": [
+    {
+      "id": "cap.submit-application",
+      "name": "Submit permit application",
+      "roleIds": ["role.applicant"],
+      "tasks": ["StartEvent_ApplicationSubmitted"]
+    },
+    {
+      "id": "cap.validate-documents",
+      "name": "Validate documents",
+      "roleIds": ["role.case-worker"],
+      "tasks": ["Task_CheckCompleteness", "Task_RequestInfo"]
+    },
+    {
+      "id": "cap.legal-checks",
+      "name": "Perform legal checks",
+      "roleIds": ["role.legal-officer"],
+      "decisions": ["Decision_PermitEligibility"]
+    },
+    {
+      "id": "cap.committee-review",
+      "name": "Participate in committee review",
+      "roleIds": ["role.committee-member"],
+      "tasks": ["Task_CommitteeReview", "Task_IssuePermit", "Task_IssueRefusal"]
+    }
+  ]
+}

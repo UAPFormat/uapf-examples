@@ -1,0 +1,19 @@
+{
+  "roles": [
+    {
+      "id": "role.applicant",
+      "name": "Applicant",
+      "description": "Customer requesting the loan."
+    },
+    {
+      "id": "role.loan-officer",
+      "name": "Loan Officer",
+      "description": "Human employee responsible for manual review and final decision."
+    },
+    {
+      "id": "role.risk-engine",
+      "name": "Risk Engine",
+      "description": "Automated risk assessment service or AI agent."
+    }
+  ]
+}

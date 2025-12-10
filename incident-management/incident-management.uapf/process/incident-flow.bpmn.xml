@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="Definitions_IncidentFlow"
+             targetNamespace="http://example.com/uapf/incident-management">
+  <process id="IncidentFlow" name="Incident Flow" isExecutable="true">
+
+    <startEvent id="StartEvent_IncidentLogged" name="Incident logged">
+      <outgoing>Flow_1</outgoing>
+    </startEvent>
+
+    <task id="Task_Triage" name="Triage incident">
+      <incoming>Flow_1</incoming>
+      <outgoing>Flow_2</outgoing>
+    </task>
+
+    <businessRuleTask id="Task_AssessPriority"
+                      name="Assess priority"
+                      implementation="dmn:IncidentPriority">
+      <incoming>Flow_2</incoming>
+      <outgoing>Flow_3</outgoing>
+    </businessRuleTask>
+
+    <exclusiveGateway id="Gateway_Escalate" name="Escalate?">
+      <incoming>Flow_3</incoming>
+      <outgoing>Flow_4</outgoing>
+      <outgoing>Flow_5</outgoing>
+    </exclusiveGateway>
+
+    <task id="Task_Resolve" name="Resolve incident">
+      <incoming>Flow_4</incoming>
+      <outgoing>Flow_6</outgoing>
+    </task>
+
+    <task id="Task_Escalate" name="Escalate to L2">
+      <incoming>Flow_5</incoming>
+      <outgoing>Flow_7</outgoing>
+    </task>
+
+    <endEvent id="EndEvent_Closed" name="Closed">
+      <incoming>Flow_6</incoming>
+      <incoming>Flow_7</incoming>
+    </endEvent>
+
+    <sequenceFlow id="Flow_1" sourceRef="StartEvent_IncidentLogged" targetRef="Task_Triage"/>
+    <sequenceFlow id="Flow_2" sourceRef="Task_Triage" targetRef="Task_AssessPriority"/>
+    <sequenceFlow id="Flow_3" sourceRef="Task_AssessPriority" targetRef="Gateway_Escalate"/>
+    <sequenceFlow id="Flow_4" sourceRef="Gateway_Escalate" targetRef="Task_Resolve" name="No"/>
+    <sequenceFlow id="Flow_5" sourceRef="Gateway_Escalate" targetRef="Task_Escalate" name="Yes"/>
+    <sequenceFlow id="Flow_6" sourceRef="Task_Resolve" targetRef="EndEvent_Closed"/>
+    <sequenceFlow id="Flow_7" sourceRef="Task_Escalate" targetRef="EndEvent_Closed"/>
+
+  </process>
+</definitions>

@@ -1,0 +1,24 @@
+{
+  "roles": [
+    {
+      "id": "role.applicant",
+      "name": "Applicant",
+      "description": "Citizen or business requesting the permit."
+    },
+    {
+      "id": "role.case-worker",
+      "name": "Case Worker",
+      "description": "Administrative staff validating applications and documents."
+    },
+    {
+      "id": "role.legal-officer",
+      "name": "Legal Officer",
+      "description": "Performs legal and compliance checks."
+    },
+    {
+      "id": "role.committee-member",
+      "name": "Committee Member",
+      "description": "Participant in collective review and approval."
+    }
+  ]
+}

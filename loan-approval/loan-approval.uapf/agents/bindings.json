@@ -1,0 +1,15 @@
+{
+  "bindings": [
+    {
+      "roleId": "role.risk-engine",
+      "implementation": "mcp",
+      "toolId": "tool.risk-score",
+      "description": "MCP tool for evaluating loan risk and returning eligibility suggestion."
+    },
+    {
+      "roleId": "role.loan-officer",
+      "implementation": "human",
+      "description": "Human user via front-end UI or external workflow system."
+    }
+  ]
+}

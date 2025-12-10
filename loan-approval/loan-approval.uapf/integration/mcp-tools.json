@@ -1,0 +1,12 @@
+{
+  "tools": [
+    {
+      "id": "tool.risk-score",
+      "name": "RiskScoreService",
+      "description": "Evaluates applicant data and returns risk metrics.",
+      "mcpEndpoint": "mcp://risk-service/tools/risk-score",
+      "inputs": ["creditScore", "debtToIncome"],
+      "outputs": ["eligibility"]
+    }
+  ]
+}

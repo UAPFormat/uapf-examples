@@ -1,0 +1,16 @@
+{
+  "endpoints": [
+    {
+      "id": "api.permits.create",
+      "method": "POST",
+      "path": "/api/permits",
+      "description": "Submit a new permit application."
+    },
+    {
+      "id": "api.permits.get",
+      "method": "GET",
+      "path": "/api/permits/{id}",
+      "description": "Retrieve permit status by identifier."
+    }
+  ]
+}

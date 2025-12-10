@@ -1,0 +1,28 @@
+{
+  "capabilities": [
+    {
+      "id": "cap.log-incident",
+      "name": "Log and classify incident",
+      "roleIds": ["role.service-desk"],
+      "tasks": ["StartEvent_IncidentLogged", "Task_Triage"]
+    },
+    {
+      "id": "cap.prioritize",
+      "name": "Determine incident priority",
+      "roleIds": ["role.service-desk"],
+      "decisions": ["Decision_IncidentPriority"]
+    },
+    {
+      "id": "cap.resolve",
+      "name": "Resolve or escalate incident",
+      "roleIds": ["role.oncall-engineer"],
+      "tasks": ["Task_Resolve", "Task_Escalate"]
+    },
+    {
+      "id": "cap.manage-major",
+      "name": "Coordinate major incident response",
+      "roleIds": ["role.incident-manager"],
+      "stages": ["Stage_InitialResponse", "Stage_RootCause"]
+    }
+  ]
+}

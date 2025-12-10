@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="Definitions_LoanApproval"
+             targetNamespace="http://example.com/uapf/loan-approval">
+  <process id="LoanApproval" name="Loan Approval" isExecutable="true">
+
+    <startEvent id="StartEvent_ApplicationReceived" name="Application received">
+      <outgoing>Flow_1</outgoing>
+    </startEvent>
+
+    <task id="Task_CollectData" name="Collect application data">
+      <incoming>Flow_1</incoming>
+      <outgoing>Flow_2</outgoing>
+    </task>
+
+    <businessRuleTask id="Task_CheckEligibility"
+                      name="Check eligibility"
+                      implementation="dmn:LoanEligibility">
+      <incoming>Flow_2</incoming>
+      <outgoing>Flow_3</outgoing>
+    </businessRuleTask>
+
+    <exclusiveGateway id="Gateway_Eligibility" name="Eligible?">
+      <incoming>Flow_3</incoming>
+      <outgoing>Flow_4</outgoing>
+      <outgoing>Flow_5</outgoing>
+    </exclusiveGateway>
+
+    <task id="Task_ApproveLoan" name="Approve loan">
+      <incoming>Flow_4</incoming>
+      <outgoing>Flow_6</outgoing>
+    </task>
+
+    <task id="Task_RejectLoan" name="Reject loan">
+      <incoming>Flow_5</incoming>
+      <outgoing>Flow_7</outgoing>
+    </task>
+
+    <endEvent id="EndEvent_Approved" name="Approved">
+      <incoming>Flow_6</incoming>
+    </endEvent>
+
+    <endEvent id="EndEvent_Rejected" name="Rejected">
+      <incoming>Flow_7</incoming>
+    </endEvent>
+
+    <sequenceFlow id="Flow_1" sourceRef="StartEvent_ApplicationReceived" targetRef="Task_CollectData"/>
+    <sequenceFlow id="Flow_2" sourceRef="Task_CollectData" targetRef="Task_CheckEligibility"/>
+    <sequenceFlow id="Flow_3" sourceRef="Task_CheckEligibility" targetRef="Gateway_Eligibility"/>
+    <sequenceFlow id="Flow_4" sourceRef="Gateway_Eligibility" targetRef="Task_ApproveLoan" name="Yes"/>
+    <sequenceFlow id="Flow_5" sourceRef="Gateway_Eligibility" targetRef="Task_RejectLoan" name="No"/>
+    <sequenceFlow id="Flow_6" sourceRef="Task_ApproveLoan" targetRef="EndEvent_Approved"/>
+    <sequenceFlow id="Flow_7" sourceRef="Task_RejectLoan" targetRef="EndEvent_Rejected"/>
+
+  </process>
+</definitions>

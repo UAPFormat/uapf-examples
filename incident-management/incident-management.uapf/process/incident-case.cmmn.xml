@@ -1,0 +1,14 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<cmmn:definitions xmlns:cmmn="http://www.omg.org/spec/CMMN/20151109/MODEL"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  id="Definitions_IncidentCase"
+                  targetNamespace="http://example.com/uapf/incident-management">
+  <cmmn:case id="Case_Incident" name="Incident Case">
+    <cmmn:casePlanModel id="CasePlan_Incident" name="Incident Case">
+      <cmmn:stage id="Stage_InitialResponse" name="Initial Response" />
+      <cmmn:stage id="Stage_RootCause" name="Root Cause Analysis" />
+      <cmmn:task id="Task_ResolutionActivities" name="Resolution Tasks" />
+      <cmmn:milestone id="Milestone_SLARisk" name="SLA Breach Risk" />
+    </cmmn:casePlanModel>
+  </cmmn:case>
+</cmmn:definitions>

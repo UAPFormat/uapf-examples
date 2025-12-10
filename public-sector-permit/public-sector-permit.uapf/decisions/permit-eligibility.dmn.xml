@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/"
+             xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"
+             id="Definitions_PermitEligibility"
+             name="Permit Eligibility"
+             namespace="http://example.com/uapf/public-sector-permit">
+  <decision id="Decision_PermitEligibility" name="PermitEligibility">
+    <variable id="var_decision" name="decision" typeRef="string"/>
+    <decisionTable id="DecisionTable_PermitEligibility" hitPolicy="FIRST">
+      <input id="Input_zoningCompliance">
+        <inputExpression id="InputExpression_zoningCompliance" typeRef="boolean">
+          <text>zoningCompliance</text>
+        </inputExpression>
+      </input>
+      <input id="Input_feePaid">
+        <inputExpression id="InputExpression_feePaid" typeRef="boolean">
+          <text>feePaid</text>
+        </inputExpression>
+      </input>
+      <input id="Input_documentsComplete">
+        <inputExpression id="InputExpression_documentsComplete" typeRef="boolean">
+          <text>documentsComplete</text>
+        </inputExpression>
+      </input>
+      <output id="Output_decision" name="decision" typeRef="string"/>
+
+      <rule id="Rule_1">
+        <inputEntry id="Rule_1_in1">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="Rule_1_in2">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="Rule_1_in3">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="Rule_1_out1">
+          <text>"GRANT"</text>
+        </outputEntry>
+      </rule>
+
+      <rule id="Rule_2">
+        <inputEntry id="Rule_2_in1">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="Rule_2_in2">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="Rule_2_in3">
+          <text>false</text>
+        </inputEntry>
+        <outputEntry id="Rule_2_out1">
+          <text>"REVIEW"</text>
+        </outputEntry>
+      </rule>
+
+      <rule id="Rule_3">
+        <inputEntry id="Rule_3_in1">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="Rule_3_in2">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="Rule_3_in3">
+          <text>-</text>
+        </inputEntry>
+        <outputEntry id="Rule_3_out1">
+          <text>"REFUSE"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>

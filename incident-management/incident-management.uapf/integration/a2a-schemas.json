@@ -1,0 +1,16 @@
+{
+  "schemas": [
+    {
+      "id": "schema.incident-payload",
+      "description": "Schema for incident events exchanged between monitoring, ticketing, and responders.",
+      "fields": [
+        "incidentId",
+        "impact",
+        "urgency",
+        "priority",
+        "summary",
+        "slaTarget"
+      ]
+    }
+  ]
+}

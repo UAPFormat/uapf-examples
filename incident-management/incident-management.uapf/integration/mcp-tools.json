@@ -1,0 +1,20 @@
+{
+  "tools": [
+    {
+      "id": "tool.create-ticket",
+      "name": "CreateIncidentTicket",
+      "description": "Creates an incident ticket and triggers workflow orchestration.",
+      "mcpEndpoint": "mcp://incident-tools/create-ticket",
+      "inputs": ["incidentId", "impact", "urgency"],
+      "outputs": ["priority"]
+    },
+    {
+      "id": "tool.update-status",
+      "name": "UpdateIncidentStatus",
+      "description": "Posts updates to ticketing and chat channels for stakeholders.",
+      "mcpEndpoint": "mcp://incident-tools/update-status",
+      "inputs": ["incidentId", "priority", "slaTarget"],
+      "outputs": []
+    }
+  ]
+}

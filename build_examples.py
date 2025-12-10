@@ -12,7 +12,13 @@ def build_uapf(example_dir: Path) -> None:
 
 def main() -> None:
     base = Path(__file__).parent
-    for name in ["acme-docflow", "rup-lifecycle"]:
+    for name in [
+        "acme-docflow",
+        "rup-lifecycle",
+        "loan-approval",
+        "incident-management",
+        "public-sector-permit",
+    ]:
         build_uapf(base / name)
 
 

@@ -1,0 +1,20 @@
+{
+  "bindings": [
+    {
+      "roleId": "role.service-desk",
+      "implementation": "mcp",
+      "toolId": "tool.create-ticket",
+      "description": "MCP tool to open and classify incidents from monitoring or chat ops."
+    },
+    {
+      "roleId": "role.oncall-engineer",
+      "implementation": "human",
+      "description": "On-call responder working in ticketing or chat platforms."
+    },
+    {
+      "roleId": "role.incident-manager",
+      "implementation": "human",
+      "description": "Person overseeing major incidents and stakeholder comms."
+    }
+  ]
+}

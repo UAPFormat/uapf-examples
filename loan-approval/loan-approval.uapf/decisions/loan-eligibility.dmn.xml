@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/"
+             xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"
+             id="Definitions_LoanEligibility"
+             name="Loan Eligibility"
+             namespace="http://example.com/uapf/loan-approval">
+  <decision id="Decision_LoanEligibility" name="LoanEligibility">
+    <variable id="var_eligibility" name="eligibility" typeRef="string"/>
+    <decisionTable id="DecisionTable_LoanEligibility" hitPolicy="FIRST">
+      <input id="Input_creditScore">
+        <inputExpression id="InputExpression_creditScore" typeRef="number">
+          <text>creditScore</text>
+        </inputExpression>
+      </input>
+      <input id="Input_debtToIncome">
+        <inputExpression id="InputExpression_debtToIncome" typeRef="number">
+          <text>debtToIncome</text>
+        </inputExpression>
+      </input>
+      <output id="Output_eligibility" name="eligibility" typeRef="string"/>
+
+      <rule id="Rule_1">
+        <inputEntry id="Rule_1_in1">
+          <text>&gt;= 700</text>
+        </inputEntry>
+        <inputEntry id="Rule_1_in2">
+          <text>&lt;= 40</text>
+        </inputEntry>
+        <outputEntry id="Rule_1_out1">
+          <text>"APPROVE"</text>
+        </outputEntry>
+      </rule>
+
+      <rule id="Rule_2">
+        <inputEntry id="Rule_2_in1">
+          <text>&gt;= 600</text>
+        </inputEntry>
+        <inputEntry id="Rule_2_in2">
+          <text>&lt;= 50</text>
+        </inputEntry>
+        <outputEntry id="Rule_2_out1">
+          <text>"REVIEW"</text>
+        </outputEntry>
+      </rule>
+
+      <rule id="Rule_3">
+        <inputEntry id="Rule_3_in1">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="Rule_3_in2">
+          <text>-</text>
+        </inputEntry>
+        <outputEntry id="Rule_3_out1">
+          <text>"REJECT"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>

@@ -1,0 +1,11 @@
+{
+  "packageVersion": "1.0.0",
+  "status": "example",
+  "changelog": [
+    {
+      "version": "1.0.0",
+      "date": "2025-12-10",
+      "description": "Initial example version for UAPF loan approval process."
+    }
+  ]
+}
