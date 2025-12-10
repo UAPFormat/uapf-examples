@@ -1,0 +1,10 @@
+{
+  "endpoints": [
+    {
+      "id": "api.incidents.create",
+      "method": "POST",
+      "path": "/api/incidents",
+      "description": "Create or log a new incident."
+    }
+  ]
+}

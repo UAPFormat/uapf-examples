@@ -1,0 +1,16 @@
+{
+  "schemas": [
+    {
+      "id": "schema.permit-application",
+      "description": "Schema for permit application exchanges between agency systems.",
+      "fields": [
+        "applicantId",
+        "permitType",
+        "zoningCompliance",
+        "feePaid",
+        "documentsComplete",
+        "decision"
+      ]
+    }
+  ]
+}

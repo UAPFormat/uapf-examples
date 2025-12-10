@@ -1,0 +1,26 @@
+{
+  "uapfVersion": "0.9.0",
+  "id": "com.example.incident-management",
+  "name": "Incident Management",
+  "version": "1.0.0",
+  "description": "IT incident handling with SLA-driven case management, structured triage, and escalation decisions.",
+  "models": {
+    "bpmn": [
+      "process/incident-flow.bpmn.xml"
+    ],
+    "dmn": [
+      "decisions/incident-priority.dmn.xml"
+    ],
+    "cmmn": [
+      "process/incident-case.cmmn.xml"
+    ]
+  },
+  "tags": [
+    "it-operations",
+    "incident",
+    "sla",
+    "bpmn",
+    "cmmn",
+    "dmn"
+  ]
+}

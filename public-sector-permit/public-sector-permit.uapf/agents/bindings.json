@@ -1,0 +1,19 @@
+{
+  "bindings": [
+    {
+      "roleId": "role.case-worker",
+      "implementation": "human",
+      "description": "Administrative portal user handling submissions."
+    },
+    {
+      "roleId": "role.legal-officer",
+      "implementation": "human",
+      "description": "Specialist performing legal review and applying DMN outputs."
+    },
+    {
+      "roleId": "role.committee-member",
+      "implementation": "human",
+      "description": "Committee participant providing group approvals or refusals."
+    }
+  ]
+}

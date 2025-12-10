@@ -1,0 +1,10 @@
+{
+  "endpoints": [
+    {
+      "id": "api.loan-application.submit",
+      "method": "POST",
+      "path": "/api/loan-applications",
+      "description": "Submit a new loan application."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "tools": [
+    {
+      "id": "tool.fetch-cadastral-data",
+      "name": "FetchCadastralData",
+      "description": "Retrieves zoning and cadastral information for the applicant's property.",
+      "mcpEndpoint": "mcp://gov-data/fetch-cadastral-data",
+      "inputs": ["applicantId", "permitType"],
+      "outputs": ["zoningCompliance"]
+    }
+  ]
+}

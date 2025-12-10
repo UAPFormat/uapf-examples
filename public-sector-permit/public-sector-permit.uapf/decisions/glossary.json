@@ -1,0 +1,34 @@
+{
+  "terms": [
+    {
+      "name": "applicantId",
+      "description": "Identifier for the applicant submitting the permit request.",
+      "type": "string"
+    },
+    {
+      "name": "permitType",
+      "description": "Type of permit requested (e.g., building, business).",
+      "type": "string"
+    },
+    {
+      "name": "zoningCompliance",
+      "description": "Whether the request complies with zoning rules.",
+      "type": "boolean"
+    },
+    {
+      "name": "feePaid",
+      "description": "Whether required fees have been paid.",
+      "type": "boolean"
+    },
+    {
+      "name": "documentsComplete",
+      "description": "Whether mandatory documents have been provided.",
+      "type": "boolean"
+    },
+    {
+      "name": "decision",
+      "description": "Decision outcome for the permit (GRANT, REVIEW, REFUSE).",
+      "type": "string"
+    }
+  ]
+}

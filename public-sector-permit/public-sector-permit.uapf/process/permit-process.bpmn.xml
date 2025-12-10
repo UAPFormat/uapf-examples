@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="Definitions_PermitProcess"
+             targetNamespace="http://example.com/uapf/public-sector-permit">
+  <process id="PermitProcess" name="Permit Process" isExecutable="true">
+
+    <startEvent id="StartEvent_ApplicationSubmitted" name="Application submitted">
+      <outgoing>Flow_1</outgoing>
+    </startEvent>
+
+    <task id="Task_CheckCompleteness" name="Check completeness">
+      <incoming>Flow_1</incoming>
+      <outgoing>Flow_2</outgoing>
+    </task>
+
+    <task id="Task_RequestInfo" name="Request missing info">
+      <incoming>Flow_2</incoming>
+      <outgoing>Flow_3</outgoing>
+    </task>
+
+    <businessRuleTask id="Task_LegalChecks"
+                      name="Legal checks (DMN)"
+                      implementation="dmn:PermitEligibility">
+      <incoming>Flow_3</incoming>
+      <outgoing>Flow_4</outgoing>
+    </businessRuleTask>
+
+    <task id="Task_CommitteeReview" name="Committee review">
+      <incoming>Flow_4</incoming>
+      <outgoing>Flow_5</outgoing>
+    </task>
+
+    <exclusiveGateway id="Gateway_Approve" name="Approve?">
+      <incoming>Flow_5</incoming>
+      <outgoing>Flow_6</outgoing>
+      <outgoing>Flow_7</outgoing>
+    </exclusiveGateway>
+
+    <task id="Task_IssuePermit" name="Issue permit">
+      <incoming>Flow_6</incoming>
+      <outgoing>Flow_8</outgoing>
+    </task>
+
+    <task id="Task_IssueRefusal" name="Issue refusal">
+      <incoming>Flow_7</incoming>
+      <outgoing>Flow_9</outgoing>
+    </task>
+
+    <endEvent id="EndEvent_Granted" name="Permit granted">
+      <incoming>Flow_8</incoming>
+    </endEvent>
+
+    <endEvent id="EndEvent_Refused" name="Permit refused">
+      <incoming>Flow_9</incoming>
+    </endEvent>
+
+    <sequenceFlow id="Flow_1" sourceRef="StartEvent_ApplicationSubmitted" targetRef="Task_CheckCompleteness"/>
+    <sequenceFlow id="Flow_2" sourceRef="Task_CheckCompleteness" targetRef="Task_RequestInfo"/>
+    <sequenceFlow id="Flow_3" sourceRef="Task_RequestInfo" targetRef="Task_LegalChecks"/>
+    <sequenceFlow id="Flow_4" sourceRef="Task_LegalChecks" targetRef="Task_CommitteeReview"/>
+    <sequenceFlow id="Flow_5" sourceRef="Task_CommitteeReview" targetRef="Gateway_Approve"/>
+    <sequenceFlow id="Flow_6" sourceRef="Gateway_Approve" targetRef="Task_IssuePermit" name="Grant"/>
+    <sequenceFlow id="Flow_7" sourceRef="Gateway_Approve" targetRef="Task_IssueRefusal" name="Refuse"/>
+    <sequenceFlow id="Flow_8" sourceRef="Task_IssuePermit" targetRef="EndEvent_Granted"/>
+    <sequenceFlow id="Flow_9" sourceRef="Task_IssueRefusal" targetRef="EndEvent_Refused"/>
+
+  </process>
+</definitions>

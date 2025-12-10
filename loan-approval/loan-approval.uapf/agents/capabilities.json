@@ -1,0 +1,22 @@
+{
+  "capabilities": [
+    {
+      "id": "cap.collect-application",
+      "name": "Collect application data",
+      "roleIds": ["role.loan-officer"],
+      "tasks": ["Task_CollectData"]
+    },
+    {
+      "id": "cap.evaluate-eligibility",
+      "name": "Evaluate loan eligibility",
+      "roleIds": ["role.risk-engine"],
+      "decisions": ["Decision_LoanEligibility"]
+    },
+    {
+      "id": "cap.approve-reject",
+      "name": "Approve or reject loan",
+      "roleIds": ["role.loan-officer"],
+      "tasks": ["Task_ApproveLoan", "Task_RejectLoan"]
+    }
+  ]
+}

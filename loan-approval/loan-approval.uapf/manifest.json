@@ -1,0 +1,23 @@
+{
+  "uapfVersion": "0.9.0",
+  "id": "com.example.loan-approval",
+  "name": "Loan Approval Process",
+  "version": "1.0.0",
+  "description": "Simple retail loan approval process combining BPMN workflow with a DMN eligibility decision.",
+  "models": {
+    "bpmn": [
+      "process/loan-approval.bpmn.xml"
+    ],
+    "dmn": [
+      "decisions/loan-eligibility.dmn.xml"
+    ],
+    "cmmn": []
+  },
+  "tags": [
+    "finance",
+    "loan",
+    "eligibility",
+    "risk",
+    "example"
+  ]
+}

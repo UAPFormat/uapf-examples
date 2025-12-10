@@ -1,0 +1,19 @@
+{
+  "terms": [
+    {
+      "name": "creditScore",
+      "description": "Numeric credit score of the applicant as provided by a bureau.",
+      "type": "number"
+    },
+    {
+      "name": "debtToIncome",
+      "description": "Debt-to-income ratio as a percentage.",
+      "type": "number"
+    },
+    {
+      "name": "eligibility",
+      "description": "Decision outcome for loan eligibility (APPROVE, REVIEW, REJECT).",
+      "type": "string"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schemas": [
+    {
+      "id": "schema.loan-application",
+      "description": "Canonical schema for loan application payloads between agents.",
+      "fields": [
+        "applicantId",
+        "creditScore",
+        "debtToIncome",
+        "requestedAmount",
+        "termMonths"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "roles": [
+    {
+      "id": "role.service-desk",
+      "name": "Service Desk Analyst",
+      "description": "First-line support handling intake and triage."
+    },
+    {
+      "id": "role.oncall-engineer",
+      "name": "On-call Engineer",
+      "description": "Technical responder addressing incidents and escalations."
+    },
+    {
+      "id": "role.incident-manager",
+      "name": "Incident Manager",
+      "description": "Coordinates major incidents and communication."
+    }
+  ]
+}
